@@ -145,7 +145,7 @@ body {
 .legend .list-2 li {
   margin:2px;
   padding:3px;
-  float:left; 
+  float:right; 
   border:1px solid rgba(0,0,0,0.2);
   width:48%;
   cursor:pointer;
