@@ -1,204 +1,206 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabela Periódica</title>
-    <link rel="stylesheet" href="styles.css"> 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <style>
+        body {
+            background: linear-gradient(to bottom right, #000000, #3b761b); 
+            color: #f9fcff; 
+            font-family: 'Verdana', sans-serif; 
+        }
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.8); 
+        }
+        .navbar-brand, .nav-link {
+            color: #fff !important; 
+        }
+        .carousel-item > img {
+            height: 50rem;
+            object-fit: cover; 
+            border: 5px solid #f9fcff; 
+            border-radius: 10px; 
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); 
+            transition: transform 0.3s;
+        }
+        .carousel-item > img:hover {
+            transform: scale(1.05); 
+        }
+        .featurette-image {
+            border: 5px solid #f9fcff; 
+            border-radius: 10px; 
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); 
+            transition: transform 0.3s; 
+        }
+        .featurette-image:hover {
+            transform: scale(1.05); 
+        }
+        .featurette-divider {
+            margin: 5rem 0;
+        }
+        .btn-secondary {
+            background-color: #f9fcff; 
+            border: none; 
+            color: #333; 
+            padding: 10px 20px; 
+            border-radius: 5px; 
+            transition: background-color 0.3s; 
+        }
+        .btn-secondary:hover {
+            background-color: #e0e0e0; 
+        }
+        footer {
+            background-color: rgba(0, 0, 0, 0.8); 
+            color: #fff; 
+            padding: 1rem 0; 
+        }
+        .featurette-heading {
+            font-weight: bold; 
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); 
+        }
+        h2, p {
+            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8); 
+        }
+     
+        .character-image {
+            border: 5px solid #f9fcff; 
+            border-radius: 10px; 
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); 
+            transition: transform 0.3s; 
+        }
+        .character-image:hover {
+            transform: scale(1.05); 
+        }
+    </style>
+    <title>Mundo do Minecraft</title>
 </head>
 <body>
-    <div class="wrapper">
-        <ul class="main">
-          
-          <!-- ROW 1 -->
-          
-          <li data-pos="1" data-nb="1.0079" class="type-1 cat-2">H<span>Hydrogen</span></li>
-          <li class="empty"></li>
-          <li class="empty"></li>
-          <li class="empty"></li>
-          <li class="empty"></li>
-          
-          <li class="empty"></li>
-          <li class="empty"></li>
-          <li class="empty"></li>
-          <li class="empty"></li>
-          <li class="empty"></li>
-          
-          <li class="empty"></li>
-          <li class="empty"></li>
-          <li class="empty"></li>
-          <li class="empty"></li>
-          <li class="empty"></li>
-          
-          <li class="empty"></li>
-          <li class="empty"></li>
-          <li data-pos="2" data-nb="4.0026" class="type-2 cat-2">He<span>Helium</span></li>
-          
-          <!-- ROW 2 -->
-          
-          <li data-pos="3" data-nb="6.941" class="type-3 cat-0">Li<span>Lithium</span></li>
-          <li data-pos="4" data-nb="9.0122" class="type-4 cat-0">Be<span>Beryllium</span></li>
-          <li class="empty"></li>
-          <li class="empty"></li>
-          <li class="empty"></li>
-          
-          <li class="empty"></li>
-          <li class="empty"></li>
-          <li class="empty"></li>
-          <li class="empty"></li>
-          <li class="empty"></li>
-          
-          <li class="empty"></li>
-          <li class="empty"></li>
-          <li data-pos="5" data-nb="10.811" class="type-5 cat-0">B<span>Boron</span></li>
-          <li data-pos="6" data-nb="12.011" class="type-5 cat-0">C<span>Carbon</span></li>
-          <li data-pos="7" data-nb="14.007" class="type-5 cat-2">N<span>Nitrogen</span></li>
-          
-          <li data-pos="8" data-nb="15.999" class="type-5 cat-2">O<span>Oxygen</span></li>
-          <li data-pos="9" data-nb="18.998" class="type-5 cat-2">F<span>Fluorine</span></li>
-          <li data-pos="10" data-nb="20.180" class="type-2 cat-2">Ne<span>Neon</span></li>
-          
-          <!-- ROW 3 -->
-          
-          <li data-pos="11" data-nb="22.990" class="type-3 cat-0">Na<span>Sodium</span></li>
-          <li data-pos="12" data-nb="24.305" class="type-4 cat-0">Mg<span>Magnesium</span></li>
-          <li class="empty"></li>
-          <li class="empty"></li>
-          <li class="empty"></li>
-          
-          <li class="empty"></li>
-          <li class="empty"></li>
-          <li class="empty"></li>
-          <li class="empty"></li>
-          <li class="empty"></li>
-          
-          <li class="empty"></li>
-          <li class="empty"></li>
-          <li data-pos="13" data-nb="26.982" class="type-7 cat-0">Al<span>Aluminium</span></li>
-          <li data-pos="14" data-nb="28.086" class="type-5 cat-0">Si<span>Silicon</span></li>
-          <li data-pos="15" data-nb="30.974" class="type-5 cat-0">P<span>Phosphorus</span></li>
-          
-          <li data-pos="16" data-nb="32.065" class="type-5 cat-0">S<span>Sulfur</span></li>
-          <li data-pos="17" data-nb="35.453" class="type-5 cat-2">Cl<span>Chlorine</span></li>
-          <li data-pos="18" data-nb="39.948" class="type-2 cat-2">Ar<span>Argon</span></li>
-          
-          <!-- ROW 4 -->
-          
-          <li data-pos="19" data-nb="39.098" class="type-3 cat-0">K<span>Potassium</span></li>
-          <li data-pos="20" data-nb="40.078" class="type-4 cat-0">Ca<span>Calcium</span></li>
-          <li data-pos="21" data-nb="44.956" class="type-6 cat-0">Sc<span>Scandium</span></li>
-          <li data-pos="22" data-nb="47.867" class="type-6 cat-0">Ti<span>Titanium</span></li>
-          <li data-pos="23" data-nb="50.942" class="type-6 cat-0">V<span>Vanadium</span></li>
-          
-          <li data-pos="24" data-nb="51.996" class="type-6 cat-0">Cr<span>Chromium</span></li>
-          <li data-pos="25" data-nb="54.938" class="type-6 cat-0">Mn<span>Manganese</span></li>
-          <li data-pos="26" data-nb="55.845" class="type-6 cat-0">Fe<span>Iron</span></li>
-          <li data-pos="27" data-nb="58.933" class="type-6 cat-0">Co<span>Cobalt</span></li>
-          <li data-pos="28" data-nb="58.693" class="type-6 cat-0">Ni<span>Nickel</span></li>
-          
-          <li data-pos="29" data-nb="63.546" class="type-6 cat-0">Cu<span>Copper</span></li>
-          <li data-pos="30" data-nb="65.39" class="type-7 cat-0">Zn<span>Zinc</span></li>
-          <li data-pos="31" data-nb="69.723" class="type-7 cat-0">Ga<span>Gallium</span></li>
-          <li data-pos="32" data-nb="72.64" class="type-7 cat-0">Ge<span>Germanium</span></li>
-          <li data-pos="33" data-nb="74.922" class="type-5 cat-0">As<span>Arsenic</span></li>
-          
-          <li data-pos="34" data-nb="78.96" class="type-5 cat-0">Se<span>Selenium</span></li>
-          <li data-pos="35" data-nb="79.904" class="type-5 cat-1">Br<span>Bromine</span></li>
-          <li data-pos="36" data-nb="83.80" class="type-2 cat-2">Kr<span>Krypton</span></li>
-          
-          <!-- ROW 5 -->
-          
-          <li data-pos="37" data-nb="85.468" class="type-3 cat-0">Rb<span>Rubidium</span></li>
-          <li data-pos="38" data-nb="87.62" class="type-4 cat-0">Sr<span>Strontium</span></li>
-          <li data-pos="39" data-nb="88.906" class="type-6 cat-0">Y<span>Yttrium</span></li>
-          <li data-pos="40" data-nb="91.224" class="type-6 cat-0">Zr<span>Zirconium</span></li>
-          <li data-pos="41" data-nb="92.906" class="type-6 cat-0">Nb<span>Niobium</span></li>
-          
-         <li data-pos="42" data-nb="95.94" class="type-6 cat-0">Mo<span>Molybdenum</span></li>
-          <li data-pos="43" data-nb="(96)" class="type-6 cat-0">Tc<span>Technetium</span></li>
-          <li data-pos="44" data-nb="101.07" class="type-6 cat-0">Ru<span>Ruthenium</span></li>
-          <li data-pos="45" data-nb="102.91" class="type-6 cat-0">Rh<span>Rhodium</span></li>
-          <li data-pos="46" data-nb="106.42" class="type-6 cat-0">Pd<span>Palladium</span></li>
-          
-          <li data-pos="47" data-nb="107.87" class="type-6 cat-0">Ag<span>Silver</span></li>
-          <li data-pos="48" data-nb="112.41" class="type-7 cat-0">Cd<span>Cadmium</span></li>
-          <li data-pos="49" data-nb="114.82" class="type-7 cat-0">In<span>Indium</span></li>
-          <li data-pos="50" data-nb="118.71" class="type-7 cat-0">Sn<span>Tin</span></li>
-          <li data-pos="51" data-nb="121.76" class="type-7 cat-0">Sb<span>Antimony</span></li>
-          
-          <li data-pos="52" data-nb="127.60" class="type-5 cat-0">Te<span>Tellurium</span></li>
-          <li data-pos="53" data-nb="126.90" class="type-5 cat-0">I<span>Iodine</span></li>
-          <li data-pos="54" data-nb="131.29" class="type-2 cat-2">Xe<span>Xenon</span></li>
-          
-          <!-- ROW 6 -->
-          
-          <li data-pos="55" data-nb="132.91" class="type-3 cat-0">Cs<span>Caesium</span></li>
-          <li data-pos="56" data-nb="137.33" class="type-4 cat-0">Ba<span>Barium</span></li>
-          <li data-pos="57-71" class="type-8">La-Lu<span>Lanthanide</span></li>
-          <li data-pos="72" data-nb="178.49" class="type-6 cat-0">Hf<span>Hafnium</span></li>
-          <li data-pos="73" data-nb="180.95" class="type-6 cat-0">Ta<span>Tantalum</span></li>
-          
-          <li data-pos="74" data-nb="183.64" class="type-6 cat-0">W<span>Tungsten</span></li>
-          <li data-pos="75" data-nb="186.21" class="type-6 cat-0">Re<span>Rhenium</span></li>
-          <li data-pos="76" data-nb="190.23" class="type-6 cat-0">Os<span>Osmium</span></li>
-          <li data-pos="77" data-nb="192.22" class="type-6 cat-0">Ir<span>Iridium</span></li>
-          <li data-pos="78" data-nb="195.08" class="type-6 cat-0">Pt<span>Platinum</span></li>
-          
-         <li data-pos="79" data-nb="196.97" class="type-6 cat-0">Au<span>Gold</span></li>
-          <li data-pos="80" data-nb="200.59" class="type-7 cat-1">Hg<span>Mercury</span></li>
-          <li data-pos="81" data-nb="204.38" class="type-7 cat-0">Tl<span>Thallium</span></li>
-          <li data-pos="82" data-nb="207.2" class="type-7 cat-0">Pb<span>Lead</span></li>
-          <li data-pos="83" data-nb="208.96" class="type-7 cat-0">Bi<span>Bismuth</span></li>
-          
-          <li data-pos="84" data-nb="(209)" class="type-7 cat-0">Po<span>Polonium</span></li>
-          <li data-pos="85" data-nb="(210)" class="type-5 cat-0">At<span>Astatine</span></li>
-          <li data-pos="86" data-nb="(222)" class="type-2 cat-2">Rn<span>Radon</span></li>
-          
-          <!-- ROW 7 -->
-          
-          <li data-pos="87" data-nb="(223)" class="type-3 cat-0">Fr<span>Francium</span></li>
-          <li data-pos="88" data-nb="(226)" class="type-4 cat-0">Ra<span>Radium</span></li>
-          <li data-pos="89-103" class="type-9">Ac-Lr<span>Actinide</span></li>
-          <li data-pos="104" data-nb="(261)" class="type-6 cat-3">Rf<span>Rutherfodum</span></li>
-          <li data-pos="105" data-nb="(262)" class="type-6 cat-3">Db<span>Dubnium</span></li>
-          
-          <li data-pos="106" data-nb="(266)" class="type-6 cat-3">Sg<span>Seaborgium</span></li>
-          <li data-pos="107" data-nb="(264)" class="type-6 cat-3">Bh<span>Bohrium</span></li>
-          <li data-pos="108" data-nb="(277)" class="type-6 cat-3">Hs<span>Hassium</span></li>
-          <li data-pos="109" data-nb="(268)" class="type-6 cat-3">Mt<span>Meitnerium</span></li>
-          <li data-pos="110" data-nb="(281)" class="type-6 cat-3">Ds<span>Damstadium</span></li>
-          
-          <li data-pos="111" data-nb="(272)" class="type-6 cat-3">Rg<span>Roentgenium</span></li>
-          <li data-pos="112" data-nb="(285)" class="type-7 cat-3">Uub<span>Ununbium</span></li>
-          <li data-pos="113" data-nb="(285)" class="type-7 cat-3">Uut<span>Ununtrium</span></li>
-          <li data-pos="114" data-nb="(289)" class="type-7 cat-3">Uuq<span>Ununquadium</span></li>
-          <li data-pos="115" data-nb="(289)" class="type-7 cat-3">Uup<span>Ununpentium</span></li>
-          
-          <li data-pos="115" data-nb="(289)" class="type-7 cat-3">Uuh<span>Ununhexium</span></li>
-          <li data-pos="115" data-nb="(289)" class="type-0 cat-3">Uus<span>Ununseptum</span></li>
-          <li data-pos="115" data-nb="(289)" class="type-2 cat-3">Uuo<span>Ununoctium</span></li>
-        </ul>
-          
-        <div class="legend">
-          <ul class="list-1">
-            <li class="cat-0"><span>C</span>Solid</li>
-            <li class="cat-1"><span>Hg</span>Liquid</li>
-            <li class="cat-2"><span>H</span>Gas</li>
-            <li class="cat-3"><span>Rf</span>Unknown</li>
-          </ul>
-          
-          <ul class="list-2">
-            <li class="type-3">Alkadi metals</li>
-            
-            <li class="type-8">Lanthanoids</li>
-            <li class="type-9">Actinoids</li>
-            <li class="type-7">Poor metals</li>
-            <li class="type-2">Noble gases</li>
-            <li class="type-6">Transition metals</li>
-            <li class="type-5">Other non-metals</li>
-            <li class="type-4">Alkadine earth metals</li>
-          </ul>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">Menu do Minecraft</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Início <span class="sr-only">(atual)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Músicas do Minecraft</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Recursos </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Minérios</a>
+                        <a class="dropdown-item" href="#">Blocos</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Criaturas</a>
+                    </div>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
+                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Buscar</button>
+            </form>
         </div>
-        </div>        
+    </nav>
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="imagem1.jpg" alt="Primeiro slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="imagem2.jpg" alt="Segundo slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="imagem3.jpg" alt="Terceiro slide">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Próximo</span>
+        </a>
+    </div>
+
+    <div class="container marketing">
+        <!-- Três colunas de texto abaixo do carrossel -->
+        <div class="row">
+            <div class="col-lg-4">
+                <img class="character-image rounded-circle" src="steve.jpg" alt="Steve" width="140" height="140">
+                <h2>Steve</h2>
+                <p>O personagem padrão do Minecraft, conhecido por suas aventuras em busca de recursos e construção de estruturas incríveis.</p>
+                <p><a class="btn btn-secondary" href="#" role="button">Veja os Detalhes &raquo;</a></p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+                <img class="character-image rounded-circle" src="alex.jpg" alt="alex" width="140" height="140">
+                <h2>Alex</h2>
+                <p>Uma das personagens jogáveis do Minecraft, sempre pronta para explorar novos biomas e enfrentar desafios.</p>
+                <p><a class="btn btn-secondary" href="#" role="button">Veja os Detalhes &raquo;</a></p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+                <img class="character-image rounded-circle" src="creeper.jpg" alt="creeper" width="140" height="140">
+                <h2>Creeper</h2>
+                <p>Uma das criaturas mais icônicas do Minecraft, conhecido por sua habilidade de se aproximar silenciosamente e explodir.</p>
+                <p><a class="btn btn-secondary" href="#" role="button">Veja os Detalhes &raquo;</a></p>
+            </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+
+        <!-- INÍCIO DAS FEATURETTES -->
+        <hr class="featurette-divider">
+        <div class="row featurette">
+            <div class="col-md-7">
+                <h2 class="featurette-heading">A Magia do Crafting. <span class="text-muted">Crie o que quiser.</span></h2>
+                <p class="lead">No Minecraft, a arte de criar é fundamental. Combine recursos e crie ferramentas, armas e muito mais!</p>
+            </div>
+            <div class="col-md-5">
+                <img class="featurette-image img-fluid mx-auto" src="crafting.jpg" alt="Imagem de crafting">
+            </div>
+        </div>
+        <hr class="featurette-divider">
+        <div class="row featurette">
+            <div class="col-md-7 order-md-2">
+                <h2 class="featurette-heading">Explorando Biomas. <span class="text-muted">Descubra novos mundos.</span></h2>
+                <p class="lead">Cada bioma no Minecraft oferece recursos únicos e desafios. Explore florestas, desertos e montanhas!</p>
+            </div>
+            <div class="col-md-5 order-md-1">
+                <img class="featurette-image img-fluid mx-auto" src="biomas.jpg" alt="Imagem de biomas">
+            </div>
+        </div>
+        <hr class="featurette-divider">
+        <div class="row featurette">
+            <div class="col-md-7">
+                <h2 class="featurette-heading">Construções Incríveis. <span class="text-muted">Deixe sua marca.</span></h2>
+                <p class="lead">Construa castelos, cidades e até mesmo réplicas de monumentos famosos. A única limitação é a sua imaginação!</p>
+            </div>
+            <div class="col-md-5">
+                <img class="featurette-image img-fluid mx-auto" src="construçao.jpg" alt="Imagem de construções">
+            </div>
+        </div>
+        <hr class="featurette-divider">
+        <!-- FIM DAS FEATURETTES -->
+    </div><!-- /.container -->
+
+    <!-- RODAPÉ -->
+    <footer class="container">
+        <p class="float-right"><a href="#" class="text-light">Voltar para o início</a></p>
+        <p>Mundo do Minecraft - 2025. · <a href="#" class="text-light">PRIVACIDADE</a> · <a href="#" class="text-light">TERMOS DE USO</a></p>
+    </footer>
+
+    <!-- JavaScript (Opcional) -->
+    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+    <script src=" https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
 </html>
