@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <style>
         body {
-            background: linear-gradient(to bottom right, #000000, #1a1a2e); /* Gradiente de preto para azul escuro */
+            background: linear-gradient(to bottom right, #000000, #003366); /* Gradiente de preto para azul escuro */
             color: #e0f7fa; /* Cor do texto em azul claro */
             font-family: 'Verdana', sans-serif; 
         }
@@ -17,7 +17,7 @@
             color: #00aaff !important; /* Azul vivo para links */
         }
         .carousel-item > img {
-            height: 50rem;
+            height: 40rem; /* Altura reduzida do carrossel */
             object-fit: cover; 
             border: 5px solid #00aaff; /* Azul vivo para bordas */
             border-radius: 10px; 
@@ -71,6 +71,14 @@
         .character-image:hover {
             transform: scale(1.05); 
         }
+        .highlight {
+            background-color: rgba(0, 0, 0, 0.7); /* Fundo escuro para destaque */
+            border: 3px solid #00aaff; /* Azul vivo para borda */
+            border-radius: 10px; 
+            padding: 20px; 
+            text-align: center; 
+            margin-bottom: 30px; /* Espaço entre os destaques */
+        }
     </style>
     <title>Mundo da Química</title>
 </head>
@@ -105,6 +113,29 @@
         </div>
     </nav>
 
+    <div class="container marketing">
+        <div class="row">
+            <div class="col-lg-4 highlight">
+                <img class="character-image rounded-circle" src="hidro.png" alt="Átomo de Hidrogênio" width="140" height="140">
+                <h2>Átomo de Hidrogênio</h2>
+                <p>O átomo de hidrogênio (H) é o elemento mais simples e leve, composto por um único próton e um único elétron. É fundamental na formação de moléculas, como a água, e desempenha um papel crucial em reações químicas, como a combustão.</p>
+                <p><a class="btn btn-secondary" href="#" role="button">Veja os Detalhes &raquo;</a></p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4 highlight">
+                <img class="character-image rounded-circle" src="moleculadeagua.png" alt="Molécula de Água" width="140" height="140">
+                <h2>Molécula de Água</h2>
+                <p>A água (H₂O) é uma molécula vital para a vida. Composta por dois átomos de hidrogênio e um de oxigênio, a água é um solvente universal e participa de inúmeras reações químicas, incluindo a fotossíntese e a respiração celular.</p>
+                <p><a class="btn btn-secondary" href="#" role="button">Veja os Detalhes &raquo;</a></p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4 highlight">
+                <img class="character-image rounded-circle" src="reaçoes.png" alt="Reação Química" width="140" height="140">
+                <h2>Reação Química</h2>
+                <p>Uma reação química é um processo que envolve a transformação de substâncias (reagentes) em novas substâncias (produtos). Exemplos incluem a combustão, a oxidação e a síntese, que são fundamentais para a química e a biologia.</p>
+                <p><a class="btn btn-secondary" href="#" role="button">Veja os Detalhes &raquo;</a></p>
+            </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -133,57 +164,35 @@
     </div>
 
     <div class="container marketing">
-        <!-- Três colunas de texto abaixo do carrossel -->
-        <div class="row">
-            <div class="col-lg-4">
-                <img class="character-image rounded-circle" src="hydrogen.jpg" alt="Átomo de Hidrogênio" width="140" height="140">
-                <h2>Átomo de Hidrogênio</h2>
-                <p>O átomo mais simples e abundante do universo, fundamental para a formação de moléculas.</p>
-                <p><a class="btn btn-secondary" href="#" role="button">Veja os Detalhes &raquo;</a></p>
-            </div><!-- /.col-lg-4 -->
-            <div class="col-lg-4">
-                <img class="character-image rounded-circle" src="water_molecule.jpg" alt="Molécula de Água" width="140" height="140">
-                <h2>Molécula de Água</h2>
-                <p>Essencial para a vida, a água é uma molécula composta por dois átomos de hidrogênio e um de oxigênio.</p>
-                <p><a class="btn btn-secondary" href="#" role="button">Veja os Detalhes &raquo;</a></p>
-            </div><!-- /.col-lg-4 -->
-            <div class="col-lg-4">
-                <img class="character-image rounded-circle" src="chemical_reaction.jpg" alt="Reação Química" width="140" height="140">
-                <h2>Reação Química</h2>
-                <p>Processo onde substâncias se transformam em novas substâncias, essencial para a química.</p>
-                <p><a class="btn btn-secondary" href="#" role="button">Veja os Detalhes &raquo;</a></p>
-            </div><!-- /.col-lg-4 -->
-        </div><!-- /.row -->
-
         <!-- INÍCIO DAS FEATURETTES -->
         <hr class="featurette-divider">
         <div class="row featurette">
             <div class="col-md-7">
                 <h2 class="featurette-heading">A Importância da Química. <span class="text-muted">Entenda o mundo ao seu redor.</span></h2>
-                <p class="lead">A química é fundamental para entender as interações entre diferentes substâncias e suas propriedades.</p>
+                <p class="lead">A química é fundamental para entender as interações entre diferentes substâncias e suas propriedades. Ela nos ajuda a compreender processos naturais e a desenvolver novas tecnologias.</p>
             </div>
             <div class="col-md-5">
-                <img class="featurette-image img-fluid mx-auto" src="chemistry.jpg" alt="Imagem de química">
+                <img class="featurette-image img-fluid mx-auto" src="im1.png" alt="Imagem de química">
             </div>
         </div>
         <hr class="featurette-divider">
         <div class="row featurette">
             <div class="col-md-7 order-md-2">
                 <h2 class="featurette-heading">Explorando Reações. <span class="text-muted">Descubra como as substâncias interagem.</span></h2>
-                <p class="lead">As reações químicas são processos fascinantes que transformam substâncias em novas formas.</p>
+                <p class="lead">As reações químicas são processos fascinantes que transformam substâncias em novas formas. Elas são essenciais em tudo, desde a digestão dos alimentos até a produção de energia em usinas.</p>
             </div>
             <div class="col-md-5 order-md-1">
-                <img class="featurette-image img-fluid mx-auto" src="reactions.jpg" alt="Imagem de reações químicas">
+                <img class="featurette-image img-fluid mx-auto" src="rea.png" alt="Imagem de reações químicas">
             </div>
         </div>
         <hr class="featurette-divider">
         <div class="row featurette">
             <div class="col-md-7">
                 <h2 class="featurette-heading">Construindo Moléculas. <span class="text-muted">A química em ação.</span></h2>
-                <p class="lead">A combinação de átomos para formar moléculas é a base da química e da biologia.</p>
+                <p class="lead">A combinação de átomos para formar moléculas é a base da química e da biologia. A estrutura molecular determina as propriedades físicas e químicas das substâncias.</p>
             </div>
             <div class="col-md-5">
-                <img class="featurette-image img-fluid mx-auto" src="molecules.jpg" alt="Imagem de moléculas">
+                <img class="featurette-image img-fluid mx-auto" src="mole.png" alt="Imagem de moléculas">
             </div>
         </div>
         <hr class="featurette-divider">
