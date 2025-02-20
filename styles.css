@@ -43,6 +43,7 @@ footer {
     border-radius: 10px; 
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); 
     transition: transform 0.3s, box-shadow 0.3s; 
+    margin-bottom: 20px; /* Espaçamento entre os elementos */
 }
 .bordered-image:hover {
     transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
@@ -58,4 +59,39 @@ footer {
     text-align: center; 
     border: 2px solid #9b59b6; /* Bordas da tabela em roxo vibrante */
     color: #e0f7fa; /* Cor do texto na tabela */
+}
+
+/* Estilo para a seção de ligações químicas */
+.ligacao {
+    background-color: rgba(155, 89, 182, 0.2); /* Fundo claro para destacar */
+    border-radius: 10px; 
+    padding: 20px; 
+    margin-bottom: 20px; /* Espaçamento entre as ligações */
+}
+
+/* Ajuste para as imagens das ligações químicas */
+.ligacao img {
+    max-width: 30%; /* Limita a largura máxima da imagem para 60% */
+    height: auto; /* Mantém a proporção da imagem */
+    margin: 0 auto; /* Centraliza a imagem */
+    display: block; /* Garante que a imagem seja tratada como um bloco */
+}
+/* Estilo para a seção de estados físicos da matéria */
+.estado-fisico {
+    position: relative; /* Permite o uso de posicionamento absoluto para as imagens */
+    margin-bottom: 40px; /* Espaçamento entre as seções */
+}
+
+/* Ajuste para as imagens dos estados físicos da matéria */
+.estado-fisico img {
+    max-width: 50%; /* Limita a largura máxima da imagem para 50% */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Garante que a imagem seja tratada como um bloco */
+    margin: 0 auto; /* Centraliza a imagem */
+    transform: rotate(-10deg); /* Rotaciona a imagem para dar um efeito diagonal */
+    transition: transform 0.3s; /* Transição suave para o efeito de hover */
+}
+
+.estado-fisico img:hover {
+    transform: rotate(0deg) scale(1.05); /* Remove a rotação e aumenta a escala ao passar o mouse */
 }
