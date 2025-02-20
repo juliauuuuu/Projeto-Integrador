@@ -3,10 +3,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <style>
         body {
-            background: linear-gradient(to bottom right, #000000, #003366); /* Gradiente de preto para azul escuro */
+            background: linear-gradient(to bottom right, #2c003e, #000000); /* Gradiente de roxo sombrio para preto */
             color: #e0f7fa; /* Cor do texto em azul claro */
             font-family: 'Verdana', sans-serif; 
         }
@@ -14,70 +14,57 @@
             background-color: rgba(0, 0, 0, 0.9); 
         }
         .navbar-brand, .nav-link {
-            color: #00aaff !important; /* Azul vivo para links */
+            color: #9b59b6 !important; /* Roxo vibrante para links */
         }
         .carousel-item > img {
-            height: 40rem; /* Altura reduzida do carrossel */
+            height: 30rem; /* Altura reduzida do carrossel */
             object-fit: cover; 
-            border: 5px solid #00aaff; /* Azul vivo para bordas */
+            border: 5px solid #9b59b6; /* Roxo vibrante para bordas */
             border-radius: 10px; 
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); 
-            transition: transform 0.3s;
+            transition: transform 0.3s, box-shadow 0.3s; /* Transição suave */
         }
         .carousel-item > img:hover {
-            transform: scale(1.05); 
-        }
-        .featurette-image {
-            border: 5px solid #00aaff; /* Azul vivo para bordas */
-            border-radius: 10px; 
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); 
-            transition: transform 0.3s; 
-        }
-        .featurette-image:hover {
-            transform: scale(1.05); 
-        }
-        .featurette-divider {
-            margin: 5rem 0;
+            transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7); /* Sombra mais intensa ao passar o mouse */
         }
         .btn-secondary {
-            background-color: #00aaff; /* Azul vivo para botões */
+            background-color: #9b59b6; /* Roxo vibrante para botões */
             border: none; 
-            color: #fff; /* Texto branco */
+            color: #fff; 
             padding: 10px 20px; 
             border-radius: 5px; 
-            transition: background-color 0.3s; 
+            transition: background-color 0.3s, transform 0.3s; 
         }
         .btn-secondary:hover {
-            background-color: #0088cc; /* Azul mais escuro ao passar o mouse */
+            background-color: #8e44ad; /* Roxo mais escuro ao passar o mouse */
+            transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
         }
         footer {
             background-color: rgba(0, 0, 0, 0.9); 
-            color: #00aaff; /* Azul vivo para o texto do rodapé */
+            color: #9b59b6; /* Roxo vibrante para o texto do rodapé */
             padding: 1rem 0; 
         }
-        .featurette-heading {
-            font-weight: bold; 
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); 
-        }
-        h2, p {
-            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8); 
-        }
-        .character-image {
-            border: 5px solid #00aaff; /* Azul vivo para bordas */
+        .bordered-image {
+            border: 5px solid #9b59b6; /* Bordas em roxo vibrante */
             border-radius: 10px; 
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); 
-            transition: transform 0.3s; 
+            transition: transform 0.3s, box-shadow 0.3s; 
         }
-        .character-image:hover {
-            transform: scale(1.05); 
+        .bordered-image:hover {
+            transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7); /* Sombra mais intensa ao passar o mouse */
         }
-        .highlight {
-            background-color: rgba(0, 0, 0, 0.7); /* Fundo escuro para destaque */
-            border: 3px solid #00aaff; /* Azul vivo para borda */
+        .highlight-table {
+            background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro para a tabela */
             border-radius: 10px; 
             padding: 20px; 
+            margin: 20px 0; 
+        }
+        .highlight-table th, .highlight-table td {
             text-align: center; 
-            margin-bottom: 30px; /* Espaço entre os destaques */
+            border: 2px solid #9b59b6; /* Bordas da tabela em roxo vibrante */
+            color: #e0f7fa; /* Cor do texto na tabela */
         }
     </style>
     <title>Mundo da Química</title>
@@ -114,101 +101,108 @@
     </nav>
 
     <div class="container marketing">
-        <div class="row">
-            <div class="col-lg-4 highlight">
-                <img class="character-image rounded-circle" src="hidro.png" alt="Átomo de Hidrogênio" width="140" height="140">
-                <h2>Átomo de Hidrogênio</h2>
-                <p>O átomo de hidrogênio (H) é o elemento mais simples e leve, composto por um único próton e um único elétron. É fundamental na formação de moléculas, como a água, e desempenha um papel crucial em reações químicas, como a combustão.</p>
-                <p><a class="btn btn-secondary" href="#" role="button">Veja os Detalhes &raquo;</a></p>
-            </div><!-- /.col-lg-4 -->
-            <div class="col-lg-4 highlight">
-                <img class="character-image rounded-circle" src="moleculadeagua.png" alt="Molécula de Água" width="140" height="140">
-                <h2>Molécula de Água</h2>
-                <p>A água (H₂O) é uma molécula vital para a vida. Composta por dois átomos de hidrogênio e um de oxigênio, a água é um solvente universal e participa de inúmeras reações químicas, incluindo a fotossíntese e a respiração celular.</p>
-                <p><a class="btn btn-secondary" href="#" role="button">Veja os Detalhes &raquo;</a></p>
-            </div><!-- /.col-lg-4 -->
-            <div class="col-lg-4 highlight">
-                <img class="character-image rounded-circle" src="reaçoes.png" alt="Reação Química" width="140" height="140">
-                <h2>Reação Química</h2>
-                <p>Uma reação química é um processo que envolve a transformação de substâncias (reagentes) em novas substâncias (produtos). Exemplos incluem a combustão, a oxidação e a síntese, que são fundamentais para a química e a biologia.</p>
-                <p><a class="btn btn-secondary" href="#" role="button">Veja os Detalhes &raquo;</a></p>
-            </div><!-- /.col-lg-4 -->
-        </div><!-- /.row -->
-    </div><!-- /.container -->
-
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img class="d-block w-100" src="quimica1.png" alt="Primeiro slide">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" src="quimica2.png" alt="Segundo slide">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" src="quimica3.png" alt="Terceiro slide">
-            </div>
+        <div class="highlight-table">
+            <h2 class="text-center text-light">Tópicos Importantes</h2>
+            <table class="table table-dark">
+                <thead>
+                    <tr>
+                        <th scope="col">Tópico</th>
+                        <th scope="col">Descrição</th>
+                        <th scope="col">Detalhes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Átomo de Hidrogênio</td>
+                        <td>O átomo de hidrogênio (H) é o elemento mais simples e leve, composto por um único próton e um único elétron.</td>
+                        <td><a class="btn btn-secondary" href="atomos.html" role="button">Veja os Detalhes</a></td>
+                    </tr>
+                    <tr>
+                        <td>Molécula de Água</td>
+                        <td>A água (H₂O) é uma molécula vital para a vida, composta por dois átomos de hidrogênio e um de oxigênio.</td>
+                        <td><a class="btn btn-secondary" href="moleculas.html" role="button">Veja os Detalhes</a></td>
+                    </tr>
+                    <tr>
+                        <td>Reação Química</td>
+                        <td>Uma reação química é um processo que envolve a transformação de substâncias (reagentes) em novas substâncias (produtos).</td>
+                        <td><a class="btn btn-secondary" href="pagina_reacoes.html" role="button">Veja os Detalhes</a></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Anterior</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Próximo</span>
-        </a>
-    </div>
 
-    <div class="container marketing">
-        <!-- INÍCIO DAS FEATURETTES -->
-        <hr class="featurette-divider">
-        <div class="row featurette">
-            <div class="col-md-7">
-                <h2 class="featurette-heading">A Importância da Química. <span class="text-muted">Entenda o mundo ao seu redor.</span></h2>
-                <p class="lead">A química é fundamental para entender as interações entre diferentes substâncias e suas propriedades. Ela nos ajuda a compreender processos naturais e a desenvolver novas tecnologias.</p>
+        <div class="container marketing">
+            <!-- INÍCIO DAS FEATURETTES -->
+            <hr class="featurette-divider">
+            <div class="row featurette">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading">A Importância da Química. <span class="text-muted">Entenda o mundo ao seu redor.</span></h2>
+                    <p class="lead">A química é fundamental para entender as interações entre diferentes substâncias e suas propriedades. Ela nos ajuda a compreender processos naturais e a desenvolver novas tecnologias.</p>
+                </div>
+                <div class="col-md-5">
+                    <img class="featurette-image img-fluid mx-auto bordered-image" src="im1.png" alt="Imagem de química">
+                </div>
             </div>
-            <div class="col-md-5">
-                <img class="featurette-image img-fluid mx-auto" src="im1.png" alt="Imagem de química">
+            <hr class="featurette-divider">
+            <div class="row featurette">
+                <div class="col-md-7 order-md-2">
+                    <h2 class="featurette-heading">Explorando Reações. <span class="text-muted">Descubra como as substâncias interagem.</span></h2>
+                    <p class="lead">As reações químicas são processos fascinantes que transformam substâncias em novas formas. Elas são essenciais em tudo, desde a digestão dos alimentos até a produção de energia em usinas.</p>
+                </div>
+                <div class="col-md-5 order-md-1">
+                    <img class="featurette-image img-fluid mx-auto bordered-image" src="rea.png" alt="Imagem de reações químicas">
+                </div>
             </div>
-        </div>
-        <hr class="featurette-divider">
-        <div class="row featurette">
-            <div class="col-md-7 order-md-2">
-                <h2 class="featurette-heading">Explorando Reações. <span class="text-muted">Descubra como as substâncias interagem.</span></h2>
-                <p class="lead">As reações químicas são processos fascinantes que transformam substâncias em novas formas. Elas são essenciais em tudo, desde a digestão dos alimentos até a produção de energia em usinas.</p>
+            <hr class="featurette-divider">
+            <div class="row featurette">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading">Construindo Moléculas. <span class="text-muted">A química em ação.</span></h2>
+                    <p class="lead">A combinação de átomos para formar moléculas é a base da química e da biologia. A estrutura molecular determina as propriedades físicas e químicas das substâncias.</p>
+                </div>
+                <div class="col-md-5">
+                    <img class="featurette-image img-fluid mx-auto bordered-image" src="mole.png" alt="Imagem de moléculas">
+                </div>
             </div>
-            <div class="col-md-5 order-md-1">
-                <img class="featurette-image img-fluid mx-auto" src="rea.png" alt="Imagem de reações químicas">
-            </div>
-        </div>
-        <hr class="featurette-divider">
-        <div class="row featurette">
-            <div class="col-md-7">
-                <h2 class="featurette-heading">Construindo Moléculas. <span class="text-muted">A química em ação.</span></h2>
-                <p class="lead">A combinação de átomos para formar moléculas é a base da química e da biologia. A estrutura molecular determina as propriedades físicas e químicas das substâncias.</p>
-            </div>
-            <div class="col-md-5">
-                <img class="featurette-image img-fluid mx-auto" src="mole.png" alt="Imagem de moléculas">
-            </div>
-        </div>
-        <hr class="featurette-divider">
-        <!-- FIM DAS FEATURETTES -->
-    </div><!-- /.container -->
+            <hr class="featurette-divider">
+            <!-- FIM DAS FEATURETTES -->
+        </div><!-- /.container -->
 
-    <!-- RODAPÉ -->
-    <footer class="container">
-        <p class="float-right"><a href="#" class="text-light">Voltar para o início</a></p>
-        <p>Mundo da Química - 2025. · <a href="#" class="text-light">PRIVACIDADE</a> · <a href="#" class="text-light">TERMOS DE USO</a></p>
-    </footer>
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100 bordered-image" src="quimica1.png" alt="Primeiro slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100 bordered-image" src="quimica2.png" alt="Segundo slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100 bordered-image" src="quimica3.png" alt="Terceiro slide">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Próximo</span>
+            </a>
+        </div>
 
-    <!-- JavaScript (Opcional) -->
-    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-</body>
+        <!-- RODAPÉ -->
+        <footer class="container">
+            <p class="float-right"><a href="#" class="text-light">Voltar para o início</a></p>
+            <p>Mundo da Química - 2025. · <a href="#" class="text-light">PRIVACIDADE</a> · <a href="#" class="text-light">TERMOS DE USO</a></p>
+        </footer>
+
+        <!-- JavaScript (Opcional) -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    </body>
 </html>
