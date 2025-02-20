@@ -6,98 +6,121 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <style>
         body {
-            background: linear-gradient(to bottom right, #000000, #1a1a2e);
-            color: #e0f7fa;
-            font-family: 'Verdana', sans-serif;
+            background: linear-gradient(to bottom right, #2c003e, #000000); /* Gradiente de roxo sombrio para preto */
+            color: #e0f7fa; /* Cor do texto em azul claro */
+            font-family: 'Verdana', sans-serif; 
         }
         .navbar {
-            background-color: rgba(0, 0, 0, 0.9);
+            background-color: rgba(0, 0, 0, 0.9); 
         }
         .navbar-brand, .nav-link {
-            color: #00aaff !important;
+            color: #9b59b6 !important; /* Roxo vibrante para links */
         }
-        .descricao-moleculas {
-            text-align: center;
-            padding: 40px;
+        .bordered-image {
+            border: 5px solid #9b59b6; /* Bordas em roxo vibrante */
+            border-radius: 10px; 
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); 
+            transition: transform 0.3s, box-shadow 0.3s; 
         }
-        .descricao-moleculas img {
-            width: 300px;
-            height: auto;
-            border-radius: 10px;
-            margin-bottom: 20px;
-        }
-        .molecula-galeria {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            padding: 40px;
-        }
-        .molecula-card {
-            background: rgba(0, 0, 0, 0.8);
-            border-radius: 10px;
-            padding: 20px;
-            width: 300px;
-            text-align: center;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-            transition: transform 0.3s;
-        }
-        .molecula-card:hover {
-            transform: scale(1.05);
-        }
-        .molecula-card img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
+        .bordered-image:hover {
+            transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7); /* Sombra mais intensa ao passar o mouse */
         }
         footer {
-            background-color: rgba(0, 0, 0, 0.9);
-            color: #00aaff;
-            text-align: center;
-            padding: 1rem 0;
+            background-color: rgba(0, 0, 0, 0.9); 
+            color: #9b59b6; /* Roxo vibrante para o texto do rodapé */
+            padding: 1rem 0; 
         }
     </style>
-    <title>Moléculas</title>
+    <title>Moléculas - Mundo da Química</title>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark">
         <a class="navbar-brand" href="#">Menu da Química</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="reações.html">Reações Químicas</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Elementos Químicos</a>
+                        <a class="dropdown-item" href="#">Compostos</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Reações</a>
+                    </div>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="atomos.html">Átomos <span class="sr-only">(atual)</span></a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
+                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Buscar</button>
+            </form>
+        </div>
     </nav>
-    
-    <div class="container">
-        <div class="descricao-moleculas">
-            <img src="molecula_generica.jpg" alt="Imagem de uma molécula">
-            <h2>O que são moléculas?</h2>
-            <p>Moléculas são compostos formados por dois ou mais átomos ligados entre si. Elas são a base da química e essenciais para todas as formas de vida e processos naturais.</p>
-        </div>
-        
-        <h1 class="text-center mt-4">Galeria de Moléculas</h1>
-        <div class="molecula-galeria">
-            <div class="molecula-card">
-                <img src="water_molecule.jpg" alt="Molécula de Água">
-                <h3>Molécula de Água</h3>
-                <p>Composta por dois átomos de hidrogênio e um de oxigênio, essencial para a vida.</p>
+
+    <div class="container marketing">
+        <h1 class="text-center text-light my-4">Átomos</h1>
+        <p class="lead text-center">Os átomos são as unidades básicas da matéria e são fundamentais para a química. Cada átomo é composto por prótons, nêutrons e elétrons.</p>
+
+        <div class="row">
+            <div class="col-md-4">
+                <img class="bordered-image img-fluid" src="hidro.png" alt="Átomo de Hidrogênio">
+                <h3>Átomo de Hidrogênio</h3>
+                <p>O hidrogênio é o elemento mais leve e simples, consistindo em um único próton e um único elétron. É essencial para a vida e a formação de moléculas.</p>
             </div>
-            <div class="molecula-card">
-                <img src="carbon_dioxide.jpg" alt="Dióxido de Carbono">
-                <h3>Dióxido de Carbono</h3>
-                <p>Molécula fundamental no ciclo do carbono, presente na atmosfera.</p>
+            <div class="col-md-4">
+                <img class="bordered-image img-fluid" src="oxi.png" alt="Átomo de Oxigênio">
+                <h3>Átomo de Oxigênio</h3>
+                <p>O oxigênio é vital para a respiração e a combustão. Consiste em oito prótons e é um componente essencial da água.</p>
             </div>
-            <div class="molecula-card">
-                <img src="methane.jpg" alt="Metano">
-                <h3>Metano</h3>
-                <p>Um dos principais gases do efeito estufa, composto por carbono e hidrogênio.</p>
-            </div>
-            <div class="molecula-card">
-                <img src="glucose.jpg" alt="Glicose">
-                <h3>Glicose</h3>
-                <p>Açúcar essencial para a geração de energia nos seres vivos.</p>
+            <div class="col-md-4">
+                <img class="bordered-image img-fluid" src="car.png" alt="Átomo de Carbono">
+                <h3>Átomo de Carbono</h3>
+                <p>O carbono é a base da química orgânica. Com seis prótons, ele forma a espinha dorsal de muitas moléculas biológicas.</p>
             </div>
         </div>
-    </div>
-    
-    <footer>
-        <p>Mundo da Química - 2025</p>
+
+        <hr class="featurette-divider">
+
+        <h2 class="text-center text-light my-4">Características dos Átomos</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <h4>Estrutura Atômica</h4>
+                <p>Os átomos são compostos por um núcleo central, que contém prótons e nêutrons, cercado por uma nuvem de elétrons. A quantidade de prótons determina o elemento químico.</p>
+            </div>
+            <div class="col-md-6">
+                <h4>Isótopos</h4>
+                <p>Isótopos são átomos do mesmo elemento que possuem diferentes números de nêutrons. Por exemplo, o carbono-12 e o carbono-14 são isótopos do carbono.</p>
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <h2 class="text-center text-light my-4">Tabela Periódica</h2>
+        <p class="lead text-center">A tabela periódica organiza os elementos químicos com base em suas propriedades e estrutura atômica.</p>
+        <img class="bordered-image img-fluid mx-auto d-block" src="tabela.png" alt="Tabela Periódica">
+
+        <hr class="featurette-divider">
+    </div><!-- /.container -->
+
+    <!-- RODAPÉ -->
+    <footer class="container">
+        <p class="float-right"><a href="#" class="text-light">Voltar para o início</a></p>
+        <p>Mundo da Química - 2025. · <a href="#" class="text-light">PRIVACIDADE</a> · <a href="#" class="text-light">TERMOS DE USO</a></p>
     </footer>
+
+    <!-- JavaScript (Opcional) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
 </html>
