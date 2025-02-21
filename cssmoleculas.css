@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap'); /*lembrete: anotar depois essa tag*/
+
 body {
     background: linear-gradient(to bottom right, #2c003e, #000000);
     color: #e0f7fa;
-    font-family: 'Verdana', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 .barra-navegacao {
@@ -10,12 +12,15 @@ body {
 
 .marca-navegacao, .link-menu {
     color: #9b59b6 !important;
+    font-weight: 600;
 }
 
 .titulo-principal {
     text-align: center;
     color: #9b59b6;
     margin: 20px 0;
+    font-size: 2.5rem;
+    font-weight: 600;
 }
 
 .grade-moleculas {
@@ -28,6 +33,7 @@ body {
 .coluna {
     text-align: center;
     width: 30%;
+    margin: 10px 0;
 }
 
 .imagem-bordada {
@@ -49,6 +55,7 @@ body {
     color: #9b59b6;
     text-align: center;
     padding: 1rem 0;
+    font-size: 0.9rem;
 }
 
 .voltar-topo, .politica-privacidade, .termos-uso {
@@ -58,4 +65,32 @@ body {
 
 .voltar-topo:hover, .politica-privacidade:hover, .termos-uso:hover {
     text-decoration: underline;
+}
+
+.descricao {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin: 20px auto;
+    max-width: 800px;
+    font-weight: 400;
+    text-align: justify;
+}
+
+h2 {
+    color: #9b59b6;
+    font-weight: 600;
+    font-size: 1.8rem;
+    margin-top: 30px;
+}
+
+h3 {
+    color: #9b59b6;
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+.coluna p {
+    font-size: 1rem;
+    color: #e0f7fa;
+    font-weight: 300;
 }
