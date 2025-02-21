@@ -13,7 +13,7 @@ body {
 }
 
 .marca-navegacao {
-    color: #9b59b6 !important;
+    color: #9b59b6;
     font-weight: 600;
     font-size: 1.8rem;
 }
@@ -129,7 +129,6 @@ footer.rodape {
     text-decoration: underline;
 }
 
-/*css pra janela */
 .janela-lateral {
     position: fixed;
     top: 20px;
@@ -141,18 +140,28 @@ footer.rodape {
     border-radius: 10px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
     z-index: 1000;
+    transition: left 0.3s;
 }
 
-.janela-lateral h4 {
-    font-size: 1.4rem;
-    font-weight: 600;
+.fechar-janela {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
     color: #9b59b6;
-    margin-bottom: 15px;
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: transform 0.3s;
 }
 
-.janela-lateral p {
-    font-size: 1rem;
-    line-height: 1.6;
+.fechar-janela.open {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.janela-lateral.fechar {
+    left: -250px;
 }
 
 .link-molview {

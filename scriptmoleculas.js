@@ -28,4 +28,13 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     });
+
+    const janela = document.querySelector(".janela-lateral");
+    const fecharJanela = document.querySelector(".fechar-janela");
+
+    fecharJanela.addEventListener("click", function () {
+        janela.classList.toggle("fechar");
+        this.classList.toggle("open");
+    });
+
 });
