@@ -8,26 +8,61 @@ body {
     padding: 0;
 }
 
-.barra-navegacao {
-    background-color: rgba(0, 0, 0, 0.9);
+.navbar {
+    background-color: black;
 }
 
-.marca-navegacao {
+.navbar-dark .navbar-nav .nav-link {
+    color: #ffffff;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: white;
+}
+
+.navbar-dark .navbar-nav .nav-item.active .nav-link {
+    color: white;
+}
+
+#themeToggle {
+    border-color: #9b59b6;
     color: #9b59b6;
-    font-weight: 600;
-    font-size: 1.8rem;
 }
 
-.botao-navegacao {
-    border: none;
-    background-color: transparent;
+#themeToggle:hover {
+    background-color: #9b59b6;
     color: #9b59b6;
 }
 
-.itens-navegacao {
-    list-style-type: none;
-    padding-left: 0;
+.navbar .dropdown-menu {
+    background-color: white;
 }
+
+.navbar .dropdown-item {
+    color: #9b59b6;
+}
+
+.navbar .dropdown-item:hover {
+    color: #9b59b6;
+}
+
+.form-inline {
+    margin-left: auto;
+}
+
+#searchInput {
+    border-radius: 20px;
+}
+
+.navbar-toggler-icon {
+    background-color: #9b59b6;
+}
+
+.navbar-collapse {
+    display: flex;
+    justify-content: flex-end;
+}
+
 
 .item-menu {
     display: inline-block;
@@ -46,7 +81,26 @@ body {
 }
 
 .ativo .link-menu {
-    color: #fff;
+    color: #9b59b6;
+}
+
+.dropdown-menu {
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+}
+
+.dropdown-item {
+    color: #9b59b6;
+    font-weight: 500;
+    font-size: 1.1rem;
+    text-decoration: none;
+}
+
+.dropdown-item:hover {
+    color: #9b59b6;
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .conteudo {

@@ -1,97 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
 body {
-    background: linear-gradient(to bottom right, #2c003e, #000000); /* Gradiente de roxo sombrio para preto */
-    color: #e0f7fa; /* Cor do texto em azul claro */
-    font-family: 'Verdana', sans-serif; 
+    background: linear-gradient(to bottom right, #2c003e, #000000);
+    color: #e0f7fa;
+    font-family: 'Poppins', sans-serif;
 }
+
 .navbar {
     background-color: rgba(0, 0, 0, 0.9); 
 }
+
 .navbar-brand, .nav-link {
-    color: #9b59b6 !important; /* Roxo vibrante para links */
+    color: #9b59b6;
 }
+
 .carousel-item > img {
-    height: 30rem; /* Altura reduzida do carrossel */
+    height: 30rem;
     object-fit: cover; 
-    border: 5px solid #9b59b6; /* Roxo vibrante para bordas */
+    border: 5px solid #9b59b6;
     border-radius: 10px; 
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); 
-    transition: transform 0.3s, box-shadow 0.3s; /* Transição suave */
+    transition: transform 0.3s, box-shadow 0.3s;
 }
+
 .carousel-item > img:hover {
-    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7); /* Sombra mais intensa ao passar o mouse */
+    transform: scale(1.05);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
 }
+
 .btn-secondary {
-    background-color: #9b59b6; /* Roxo vibrante para botões */
+    background-color: #9b59b6;
     border: none; 
     color: #fff; 
     padding: 10px 20px; 
     border-radius: 5px; 
     transition: background-color 0.3s, transform 0.3s; 
 }
+
 .btn-secondary:hover {
-    background-color: #8e44ad; /* Roxo mais escuro ao passar o mouse */
-    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+    background-color: #8e44ad;
+    transform: scale(1.05);
 }
+
 footer {
     background-color: rgba(0, 0, 0, 0.9); 
-    color: #9b59b6; /* Roxo vibrante para o texto do rodapé */
+    color: #9b59b6;
     padding: 1rem 0; 
 }
+
 .bordered-image {
-    border: 5px solid #9b59b6; /* Bordas em roxo vibrante */
+    border: 5px solid #9b59b6;
     border-radius: 10px; 
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); 
     transition: transform 0.3s, box-shadow 0.3s; 
-    margin-bottom: 20px; /* Espaçamento entre os elementos */
+    margin-bottom: 20px;
 }
+
 .bordered-image:hover {
-    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7); /* Sombra mais intensa ao passar o mouse */
+    transform: scale(1.05);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
 }
+
 .highlight-table {
-    background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro para a tabela */
+    background-color: rgba(0, 0, 0, 0.8);
     border-radius: 10px; 
     padding: 20px; 
     margin: 20px 0; 
 }
+
 .highlight-table th, .highlight-table td {
     text-align: center; 
-    border: 2px solid #9b59b6; /* Bordas da tabela em roxo vibrante */
-    color: #e0f7fa; /* Cor do texto na tabela */
+    border: 2px solid #9b59b6;
+    color: #e0f7fa;
 }
 
-/* Estilo para a seção de ligações químicas */
 .ligacao {
-    background-color: rgba(155, 89, 182, 0.2); /* Fundo claro para destacar */
+    background-color: rgba(155, 89, 182, 0.2);
     border-radius: 10px; 
     padding: 20px; 
-    margin-bottom: 20px; /* Espaçamento entre as ligações */
+    margin-bottom: 20px;
 }
 
-/* Ajuste para as imagens das ligações químicas */
 .ligacao img {
-    max-width: 30%; /* Limita a largura máxima da imagem para 60% */
-    height: auto; /* Mantém a proporção da imagem */
-    margin: 0 auto; /* Centraliza a imagem */
-    display: block; /* Garante que a imagem seja tratada como um bloco */
-}
-/* Estilo para a seção de estados físicos da matéria */
-.estado-fisico {
-    position: relative; /* Permite o uso de posicionamento absoluto para as imagens */
-    margin-bottom: 40px; /* Espaçamento entre as seções */
+    max-width: 30%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
 }
 
-/* Ajuste para as imagens dos estados físicos da matéria */
+.estado-fisico {
+    position: relative;
+    margin-bottom: 40px;
+}
+
 .estado-fisico img {
-    max-width: 50%; /* Limita a largura máxima da imagem para 50% */
-    height: auto; /* Mantém a proporção da imagem */
-    display: block; /* Garante que a imagem seja tratada como um bloco */
-    margin: 0 auto; /* Centraliza a imagem */
-    transform: rotate(-10deg); /* Rotaciona a imagem para dar um efeito diagonal */
-    transition: transform 0.3s; /* Transição suave para o efeito de hover */
+    max-width: 50%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    transform: rotate(-10deg);
+    transition: transform 0.3s;
 }
 
 .estado-fisico img:hover {
-    transform: rotate(0deg) scale(1.05); /* Remove a rotação e aumenta a escala ao passar o mouse */
+    transform: rotate(0deg) scale(1.05);
+}
+
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #9b59b6;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-top: 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-top: 30px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.3rem;
+    margin-top: 10px;
+    text-align: center;
 }
