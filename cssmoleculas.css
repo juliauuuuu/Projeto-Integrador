@@ -75,6 +75,15 @@ h2 {
     font-weight: 600;
     font-size: 1.8rem;
     margin-top: 30px;
+    text-align: center;
+}
+
+h3 {
+    color: #9b59b6;
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin-top: 10px;
+    text-align: center;
 }
 
 .grade-moleculas {
@@ -105,13 +114,6 @@ h2 {
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
 }
 
-h3 {
-    color: #9b59b6;
-    font-weight: 600;
-    font-size: 1.3rem;
-    margin-top: 10px;
-}
-
 footer.rodape {
     background-color: rgba(0, 0, 0, 0.9);
     color: #9b59b6;
@@ -131,7 +133,7 @@ footer.rodape {
 
 .janela-lateral {
     position: fixed;
-    top: 20px;
+    top: 80px;
     left: 0;
     width: 250px;
     padding: 15px;
