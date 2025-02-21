@@ -1,70 +1,64 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap'); /*lembrete: anotar depois essa tag*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
 body {
     background: linear-gradient(to bottom right, #2c003e, #000000);
     color: #e0f7fa;
     font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 .barra-navegacao {
     background-color: rgba(0, 0, 0, 0.9);
 }
 
-.marca-navegacao, .link-menu {
+.marca-navegacao {
     color: #9b59b6 !important;
     font-weight: 600;
+    font-size: 1.8rem;
+}
+
+.botao-navegacao {
+    border: none;
+    background-color: transparent;
+    color: #9b59b6;
+}
+
+.itens-navegacao {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.item-menu {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.link-menu {
+    text-decoration: none;
+    color: #9b59b6;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.link-menu:hover {
+    text-decoration: underline;
+}
+
+.ativo .link-menu {
+    color: #fff;
+}
+
+.conteudo {
+    padding: 20px;
 }
 
 .titulo-principal {
     text-align: center;
     color: #9b59b6;
-    margin: 20px 0;
+    margin-top: 40px;
     font-size: 2.5rem;
     font-weight: 600;
-}
-
-.grade-moleculas {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.coluna {
-    text-align: center;
-    width: 30%;
-    margin: 10px 0;
-}
-
-.imagem-bordada {
-    width: 100%;
-    max-width: 150px;
-    border: 5px solid #9b59b6;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.imagem-bordada:hover {
-    transform: scale(1.1);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
-}
-
-.rodape {
-    background-color: rgba(0, 0, 0, 0.9);
-    color: #9b59b6;
-    text-align: center;
-    padding: 1rem 0;
-    font-size: 0.9rem;
-}
-
-.voltar-topo, .politica-privacidade, .termos-uso {
-    color: #e0f7fa;
-    text-decoration: none;
-}
-
-.voltar-topo:hover, .politica-privacidade:hover, .termos-uso:hover {
-    text-decoration: underline;
 }
 
 .descricao {
@@ -83,14 +77,118 @@ h2 {
     margin-top: 30px;
 }
 
+.grade-moleculas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.coluna {
+    text-align: center;
+    width: 30%;
+    margin-bottom: 30px;
+}
+
+.imagem-bordada {
+    width: 100%;
+    max-width: 180px;
+    border: 5px solid #9b59b6;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.imagem-bordada:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
+}
+
 h3 {
     color: #9b59b6;
     font-weight: 600;
     font-size: 1.3rem;
+    margin-top: 10px;
 }
 
-.coluna p {
-    font-size: 1rem;
+footer.rodape {
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #9b59b6;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+}
+
+.voltar-topo, .politica-privacidade, .termos-uso {
     color: #e0f7fa;
-    font-weight: 300;
+    text-decoration: none;
+}
+
+.voltar-topo:hover, .politica-privacidade:hover, .termos-uso:hover {
+    text-decoration: underline;
+}
+
+/*css pra janela */
+.janela-lateral {
+    position: fixed;
+    top: 20px;
+    left: 0;
+    width: 250px;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #e0f7fa;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.janela-lateral h4 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #9b59b6;
+    margin-bottom: 15px;
+}
+
+.janela-lateral p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.link-molview {
+    color: #9b59b6;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.link-molview:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .grade-moleculas {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .coluna {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .titulo-principal {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .descricao {
+        font-size: 1rem;
+    }
+
+    h3 {
+        font-size: 1.1rem;
+    }
 }
