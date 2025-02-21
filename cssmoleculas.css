@@ -1,26 +1,26 @@
 body {
-    background: linear-gradient(to bottom right, #2c003e, #000000); /* Gradiente de roxo sombrio para preto */
-    color: #e0f7fa; /* Cor do texto em azul claro */
+    background: linear-gradient(to bottom right, #2c003e, #000000);
+    color: #e0f7fa;
     font-family: 'Verdana', sans-serif; 
 }
 .navbar {
     background-color: rgba(0, 0, 0, 0.9); 
 }
 .navbar-brand, .nav-link {
-    color: #9b59b6 !important; /* Roxo vibrante para links */
+    color: #9b59b6 !important;
 }
 .bordered-image {
-    border: 5px solid #9b59b6; /* Bordas em roxo vibrante */
+    border: 5px solid #9b59b6;
     border-radius: 10px; 
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); 
     transition: transform 0.3s, box-shadow 0.3s; 
 }
 .bordered-image:hover {
-    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7); /* Sombra mais intensa ao passar o mouse */
+    transform: scale(1.05);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
 }
 footer {
     background-color: rgba(0, 0, 0, 0.9); 
-    color: #9b59b6; /* Roxo vibrante para o texto do rodapé */
+    color: #9b59b6;
     padding: 1rem 0; 
 }
