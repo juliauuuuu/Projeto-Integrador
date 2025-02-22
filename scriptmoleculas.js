@@ -1,40 +1,53 @@
-document.addEventListener("DOMContentLoaded", function () {
+function searchTopics() {
+    const input = document.getElementById('searchInput');
+    const filter = input.value.toLowerCase();
+    const table = document.getElementById('topicsTable');
+    const tr = table.getElementsByTagName('tr');
 
-    document.querySelectorAll(".imagem-bordada").forEach(img => {
-        img.addEventListener("mouseover", function () {
-            this.style.transform = "scale(1.1)";
-            this.style.boxShadow = "0 10px 30px rgba(0, 0, 0, 0.7)";
-        });
-        img.addEventListener("mouseout", function () {
-            this.style.transform = "scale(1)";
-            this.style.boxShadow = "0 4px 15px rgba(0, 0, 0, 0.5)";
-        });
-    });
-
-    document.querySelector(".formulario-pesquisa").addEventListener("submit", function (evento) {
-        let campoPesquisa = document.querySelector(".campo-pesquisa");
-        if (campoPesquisa.value.trim() === "") {
-            evento.preventDefault();
-            alert("Por favor, insira um termo para pesquisa.");
+    for (let i = 1; i < tr.length; i++) {
+        const td = tr[i].getElementsByTagName('td')[0];
+        if (td) {
+            const txtValue = td.textContent || td.innerText;
+            tr[i].style.display = txtValue.toLowerCase().indexOf(filter) > -1 ? '' : 'none';
         }
-    });
+    }
+}
 
-    window.addEventListener("scroll", function () {
-        document.querySelectorAll(".secao-dinamica").forEach(secao => {
-            let posicao = secao.getBoundingClientRect().top;
-            let alturaJanela = window.innerHeight / 1.3;
-            if (posicao < alturaJanela) {
-                secao.classList.add("visivel");
-            }
+function toggleTheme() {
+    const body = document.body;
+    body.classList.toggle('dark-theme');
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    document.body.classList.add('fade-in');
+
+    const searchInput = document.getElementById('searchInput');
+    searchInput.addEventListener('keyup', searchTopics);
+
+    const resourceItems = document.querySelectorAll('.resource-item');
+    resourceItems.forEach(item => {
+        item.addEventListener('click', function() {
+            const title = this.getAttribute('data-title');
+            const description = this.getAttribute('data-description');
+            showResourceDetails(title, description);
         });
     });
-
-    const janela = document.querySelector(".janela-lateral");
-    const fecharJanela = document.querySelector(".fechar-janela");
-
-    fecharJanela.addEventListener("click", function () {
-        janela.classList.toggle("fechar");
-        this.classList.toggle("open");
-    });
-
 });
+
+// Função para alternar a visibilidade da janela lateral e girar a seta
+function toggleJanela() {
+    const janela = document.querySelector('.janela-lateral');
+    const seta = document.querySelector('.fechar-janela');
+
+    // Verifica a posição da janela lateral
+    if (janela.style.left === '0px') {
+        janela.style.left = '-300px'; // Fecha a janela lateral
+        seta.classList.remove('rotacionar'); // Remove a rotação da seta
+    } else {
+        janela.style.left = '0px'; // Abre a janela lateral
+        seta.classList.add('rotacionar'); // Adiciona a rotação na seta
+    }
+}
+
+// Adiciona o evento de clique ao botão da seta para alternar a janela lateral
+document.querySelector('.fechar-janela').addEventListener('click', alternarJanela);
