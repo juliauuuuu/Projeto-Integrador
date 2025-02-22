@@ -4,32 +4,26 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="cssatomos.css">
     <style>
-        body {
-            background: linear-gradient(to bottom right, #2c003e, #000000); /* Gradiente de roxo sombrio para preto */
-            color: #e0f7fa; /* Cor do texto em azul claro */
-            font-family: 'Verdana', sans-serif; 
+        .dark-theme {
+            background-color: #343a40;
+            color: white;
         }
-        .navbar {
-            background-color: rgba(0, 0, 0, 0.9); 
+        .fade-in {
+            animation: fadeIn 1s;
         }
-        .navbar-brand, .nav-link {
-            color: #9b59b6 !important; /* Roxo vibrante para links */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
-        .bordered-image {
-            border: 5px solid #9b59b6; /* Bordas em roxo vibrante */
-            border-radius: 10px; 
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); 
-            transition: transform 0.3s, box-shadow 0.3s; 
+        .modal-content {
+            background-color: rgb(44, 10, 68); /* Cor de fundo do modal */
+            color: white; /* Cor do texto do modal */
         }
-        .bordered-image:hover {
-            transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7); /* Sombra mais intensa ao passar o mouse */
-        }
-        footer {
-            background-color: rgba(0, 0, 0, 0.9); 
-            color: #9b59b6; /* Roxo vibrante para o texto do rodapé */
-            padding: 1rem 0; 
+        .modal-header {
+            background-color: black; /* Cor de fundo do cabeçalho do modal */
+            color: white; /* Cor do texto do cabeçalho do modal */
         }
     </style>
     <title>Átomos - Mundo da Química</title>
@@ -42,28 +36,27 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Início</a>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Início <span class="sr-only">(atual)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="reações.html">Reações Químicas</a>
+                    <a class="nav-link" href="#">Reações Químicas</a>
+                    <a class="nav-link" href="moleculas.html">Moléculas</a>
+                    <a class="nav-link" href="atomos.html">Átomos</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Recursos </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Elementos Químicos</a>
-                        <a class="dropdown-item" href="#">Compostos</a>
+                        <a class="dropdown-item resource-item" href="#" data-title="Elementos Químicos" data-description="Os elementos químicos são substâncias puras que não podem ser decompostas em substâncias mais simples. Cada elemento é representado por um símbolo químico.">Elementos Químicos</a>
+                        <a class="dropdown-item resource-item" href="#" data-title="Compostos" data-description="Os compostos são substâncias formadas pela combinação de dois ou mais elementos químicos em proporções fixas. Eles têm propriedades diferentes dos elementos que os compõem.">Compostos</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Reações</a>
+                        <a class="dropdown-item resource-item" href="#" data-title="Reações" data-description="As reações químicas são processos que envolvem a transformação de substâncias em novas substâncias. Elas podem ser classificadas em diferentes tipos, como reações de síntese, decomposição e deslocamento.">Reações</a>
                     </div>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="atomos.html">Átomos <span class="sr-only">(atual)</span></a>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
-                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Buscar</button>
+                <input id="searchInput" class="form-control mr-sm-2" type="search" placeholder="Buscar Tópicos" aria-label="Search">
+                <button class="btn btn-outline-light my-2 my-sm-0" type="button" id="themeToggle">Alternar Tema</button>
             </form>
         </div>
     </nav>

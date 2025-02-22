@@ -19,20 +19,6 @@ body {
     color: #9b59b6;
 }
 
-.carousel-item > img {
-    height: 30rem;
-    object-fit: cover; 
-    border: 5px solid #9b59b6;
-    border-radius: 10px; 
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); 
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.carousel-item > img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
-}
-
 .btn-secondary {
     background-color: #9b59b6;
     border: none; 
@@ -64,51 +50,6 @@ footer {
 .bordered-image:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
-}
-
-.highlight-table {
-    background-color: rgba(0, 0, 0, 0.8);
-    border-radius: 10px; 
-    padding: 20px; 
-    margin: 20px 0; 
-}
-
-.highlight-table th, .highlight-table td {
-    text-align: center; 
-    border: 2px solid #9b59b6;
-    color: #e0f7fa;
-}
-
-.ligacao {
-    background-color: rgba(155, 89, 182, 0.2);
-    border-radius: 10px; 
-    padding: 20px; 
-    margin-bottom: 20px;
-}
-
-.ligacao img {
-    max-width: 30%;
-    height: auto;
-    margin: 0 auto;
-    display: block;
-}
-
-.estado-fisico {
-    position: relative;
-    margin-bottom: 40px;
-}
-
-.estado-fisico img {
-    max-width: 50%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    transform: rotate(-10deg);
-    transition: transform 0.3s;
-}
-
-.estado-fisico img:hover {
-    transform: rotate(0deg) scale(1.05);
 }
 
 h1, h2, h3 {
