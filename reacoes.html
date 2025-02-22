@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="cssreacoes.css"> 
+    <title>Reações Químicas - Mundo da Química</title>
+    <style>
+        .dark-theme {
+            background-color: #343a40;
+            color: white;
+        }
+        .fade-in {
+            animation: fadeIn 1s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .modal-content {
+            background-color: rgb(44, 10, 68);
+            color: white;
+        }
+        .modal-header {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">Menu da Química</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="reacoes.html">Reações Químicas</a>
+                </li>
+            </ul>
+            <button class="btn btn-outline-light" type="button" id="themeToggle">Alternar Tema</button>
+        </div>
+    </nav>
+
+    <div class="conteudo">
+        <h1 class="titulo-principal">Reações Químicas</h1>
+        <p class="descricao">
+            As reações químicas são processos nos quais as substâncias iniciais (reagentes) se transformam em novas substâncias (produtos), com diferentes propriedades químicas.
+        </p>
+
+        <h2>Classificação das Reações Químicas</h2>
+        <ul>
+            <li><strong>Reações de Síntese:</strong> Duas ou mais substâncias se combinam para formar um único produto. Exemplo: 2H₂ + O₂ → 2H₂O.</li>
+            <li><strong>Reações de Decomposição:</strong> Um composto se divide em substâncias mais simples. Exemplo: 2H₂O₂ → 2H₂O + O₂.</li>
+            <li><strong>Reações de Substituição Simples:</strong> Um elemento reage com um composto, substituindo um dos elementos. Exemplo: Zn + 2HCl → ZnCl₂ + H₂.</li>
+            <li><strong>Reações de Dupla Troca:</strong> Os íons de dois compostos trocam de lugar. Exemplo: NaCl + AgNO₃ → NaNO₃ + AgCl.</li>
+            <li><strong>Reações de Combustão:</strong> Envolvem um combustível reagindo com oxigênio, liberando energia. Exemplo: CH₄ + 2O₂ → CO₂ + 2H₂O.</li>
+        </ul>
+
+        <h2>Simulador de Reações Químicas</h2>
+        <p class="descricao">Escolha dois reagentes para ver a reação correspondente:</p>
+        <select id="reagent1">
+            <option value="H2">Hidrogênio (H₂)</option>
+            <option value="O2">Oxigênio (O₂)</option>
+            <option value="NaCl">Cloreto de Sódio (NaCl)</option>
+        </select>
+        <select id="reagent2">
+            <option value="O2">Oxigênio (O₂)</option>
+            <option value="AgNO3">Nitrato de Prata (AgNO₃)</option>
+            <option value="HCl">Ácido Clorídrico (HCl)</option>
+        </select>
+        <button onclick="showReaction()">Ver Reação</button>
+        <p id="reactionResult"></p>
+    </div>
+
+    <footer>
+        <div class="container text-center">
+            <p>&copy; 2023 Mundo da Química. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        function showReaction() {
+            var reagent1 = document.getElementById("reagent1").value;
+            var reagent2 = document.getElementById("reagent2").value;
+            var result = "";
+            if (reagent1 === "H2" && reagent2 === "O2") {
+                result = "2H₂ + O₂ → 2H₂O (Água)";
+            } else if (reagent1 === "NaCl" && reagent2 === "AgNO3") {
+                result = "NaCl + AgNO₃ → NaNO₃ + AgCl (Precipitação)";
+            } else if (reagent1 === "H2" && reagent2 === "HCl") {
+                result = "H₂ + Cl₂ → 2HCl (Gás Clorídrico)";
+            } else {
+                result = "Nenhuma reação disponível para esses reagentes.";
+            }
+            document.getElementById("reactionResult").innerText = result;
+        }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</body>
+</html>
