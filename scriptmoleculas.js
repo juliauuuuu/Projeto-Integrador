@@ -34,20 +34,17 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Função para alternar a visibilidade da janela lateral e girar a seta
 function toggleJanela() {
     const janela = document.querySelector('.janela-lateral');
     const seta = document.querySelector('.fechar-janela');
 
-    // Verifica a posição da janela lateral
     if (janela.style.left === '0px') {
-        janela.style.left = '-300px'; // Fecha a janela lateral
-        seta.classList.remove('rotacionar'); // Remove a rotação da seta
+        janela.style.left = '-300px';
+        seta.classList.remove('rotacionar');
     } else {
-        janela.style.left = '0px'; // Abre a janela lateral
-        seta.classList.add('rotacionar'); // Adiciona a rotação na seta
+        janela.style.left = '0px';
+        seta.classList.add('rotacionar');
     }
 }
 
-// Adiciona o evento de clique ao botão da seta para alternar a janela lateral
 document.querySelector('.fechar-janela').addEventListener('click', alternarJanela);
