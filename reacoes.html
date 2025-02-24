@@ -26,84 +26,132 @@
             background-color: black;
             color: white;
         }
+        .reaction-image {
+            width: 100%;
+            max-width: 600px;
+            margin: 20px auto;
+            display: block;
+            border-radius: 10px;
+        }
     </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark">
         <a class="navbar-brand" href="#">Menu da Química</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Início</a>
+                    <a class="nav-link" href="index.html">Início <span class="sr-only">(atual)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="reacoes.html">Reações Químicas</a>
+                    <a class="nav-link" href="#">Reações Químicas</a>
+                    <a class="nav-link" href="moleculas.html">Moléculas</a>
+                    <a class="nav-link" href="atomos.html">Átomos</a>
                 </li>
             </ul>
-            <button class="btn btn-outline-light" type="button" id="themeToggle">Alternar Tema</button>
         </div>
     </nav>
 
     <div class="conteudo">
         <h1 class="titulo-principal">Reações Químicas</h1>
         <p class="descricao">
-            As reações químicas são processos nos quais as substâncias iniciais (reagentes) se transformam em novas substâncias (produtos), com diferentes propriedades químicas.
+            As reações químicas são processos fundamentais na ciência. Aqui estão algumas classificações:
         </p>
-
-        <h2>Classificação das Reações Químicas</h2>
+        <h2>Classificação das Reações</h2>
         <ul>
-            <li><strong>Reações de Síntese:</strong> Duas ou mais substâncias se combinam para formar um único produto. Exemplo: 2H₂ + O₂ → 2H₂O.</li>
-            <li><strong>Reações de Decomposição:</strong> Um composto se divide em substâncias mais simples. Exemplo: 2H₂O₂ → 2H₂O + O₂.</li>
-            <li><strong>Reações de Substituição Simples:</strong> Um elemento reage com um composto, substituindo um dos elementos. Exemplo: Zn + 2HCl → ZnCl₂ + H₂.</li>
-            <li><strong>Reações de Dupla Troca:</strong> Os íons de dois compostos trocam de lugar. Exemplo: NaCl + AgNO₃ → NaNO₃ + AgCl.</li>
-            <li><strong>Reações de Combustão:</strong> Envolvem um combustível reagindo com oxigênio, liberando energia. Exemplo: CH₄ + 2O₂ → CO₂ + 2H₂O.</li>
+            <li><strong>Síntese:</strong> Duas ou mais substâncias se combinam para formar um composto novo.</li>
+            <li><strong>Decomposição:</strong> Uma substância se divide em duas ou mais substâncias menores.</li>
+            <li><strong>Simples Troca:</strong> Um elemento substitui outro em um composto.</li>
+            <li><strong>Dupla Troca:</strong> Dois compostos trocam componentes formando novos compostos.</li>
         </ul>
+        <img src="reacoes-quimicas-tipos.webp" alt="Exemplo de Reação Química" class="reaction-image">
 
-        <h2>Simulador de Reações Químicas</h2>
-        <p class="descricao">Escolha dois reagentes para ver a reação correspondente:</p>
-        <select id="reagent1">
-            <option value="H2">Hidrogênio (H₂)</option>
-            <option value="O2">Oxigênio (O₂)</option>
-            <option value="NaCl">Cloreto de Sódio (NaCl)</option>
-        </select>
-        <select id="reagent2">
-            <option value="O2">Oxigênio (O₂)</option>
-            <option value="AgNO3">Nitrato de Prata (AgNO₃)</option>
-            <option value="HCl">Ácido Clorídrico (HCl)</option>
-        </select>
-        <button onclick="showReaction()">Ver Reação</button>
-        <p id="reactionResult"></p>
+        <h2>Simulador de Reações</h2>
+        <p>Escolha dois reagentes e veja o resultado da reação:</p>
+        <form id="reactionForm">
+            <label for="reagente1">Reagente 1:</label>
+            <select id="reagente1">
+                <option value="H2">Hidrogênio (H₂)</option>
+                <option value="O2">Oxigênio (O₂)</option>
+                <option value="Na">Sódio (Na)</option>
+                <option value="Cl2">Cloro (Cl₂)</option>
+                <option value="Fe">Ferro (Fe)</option>
+                <option value="S">Enxofre (S)</option>
+                <option value="AgNO3">Nitrato de Prata (AgNO₃)</option>
+                <option value="HCl">Ácido Clorídrico (HCl)</option>
+            </select>
+            <label for="reagente2">Reagente 2:</label>
+            <select id="reagente2">
+                <option value="H2">Hidrogênio (H₂)</option>
+                <option value="O2">Oxigênio (O₂)</option>
+                <option value="Na">Sódio (Na)</option>
+                <option value="Cl2">Cloro (Cl₂)</option>
+                <option value="Fe">Ferro (Fe)</option>
+                <option value="S">Enxofre (S)</option>
+                <option value="AgNO3">Nitrato de Prata (AgNO₃)</option>
+                <option value="HCl">Ácido Clorídrico (HCl)</option>
+            </select>
+            <button type="button" onclick="mostrarReacao()">Ver Reação</button>
+        </form>
+        <p id="resultadoReacao"></p>
+    </div>
+
+        <h2>Sugira uma Reação Química</h2>
+        <section class="formulario">
+            <form action="#" method="post">
+                <label for="nome">Seu Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+                
+                <label for="email">Seu Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="reacao">Reação Química:</label>
+                <textarea id="reacao" name="reacao" rows="4" required></textarea>
+                
+                <button type="submit">Enviar Sugestão</button>
+            </form>
+        </section>
     </div>
 
     <footer>
         <div class="container text-center">
-            <p>&copy; 2023 Mundo da Química. Todos os direitos reservados.</p>
+            <p>&copy; 2025 Mundo da Química. Todos os direitos reservados.</p>
         </div>
     </footer>
 
     <script>
-        function showReaction() {
-            var reagent1 = document.getElementById("reagent1").value;
-            var reagent2 = document.getElementById("reagent2").value;
-            var result = "";
-            if (reagent1 === "H2" && reagent2 === "O2") {
-                result = "2H₂ + O₂ → 2H₂O (Água)";
-            } else if (reagent1 === "NaCl" && reagent2 === "AgNO3") {
-                result = "NaCl + AgNO₃ → NaNO₃ + AgCl (Precipitação)";
-            } else if (reagent1 === "H2" && reagent2 === "HCl") {
-                result = "H₂ + Cl₂ → 2HCl (Gás Clorídrico)";
-            } else {
-                result = "Nenhuma reação disponível para esses reagentes.";
-            }
-            document.getElementById("reactionResult").innerText = result;
-        }
-    </script>
+function mostrarReacao() {
+    let r1 = document.getElementById('reagente1').value;
+    let r2 = document.getElementById('reagente2').value;
+    let resultado = "";
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    if ((r1 === "H2" && r2 === "O2") || (r1 === "O2" && r2 === "H2")) {
+        resultado = "A reação produz água (H₂O)!";
+    } else if ((r1 === "Na" && r2 === "Cl2") || (r1 === "Cl2" && r2 === "Na")) {
+        resultado = "A reação forma Cloreto de Sódio (NaCl), o sal de cozinha!";
+    } else if ((r1 === "Fe" && r2 === "S") || (r1 === "S" && r2 === "Fe")) {
+        resultado = "A reação forma Sulfeto de Ferro (FeS)!";
+    } else if ((r1 === "Fe" && r2 === "HCl") || (r1 === "HCl" && r2 === "Fe")) {
+        resultado = "O ferro reage com ácido clorídrico formando Cloreto de Ferro (FeCl₂) e gás hidrogênio!";
+    } else if ((r1 === "Na" && r2 === "H2O") || (r1 === "H2O" && r2 === "Na")) {
+        resultado = "O sódio reage com água formando Hidróxido de Sódio (NaOH) e gás hidrogênio!";
+    } else if ((r1 === "AgNO3" && r2 === "Fe") || (r1 === "Fe" && r2 === "AgNO3")) {
+        resultado = "O ferro desloca a prata formando Nitrato de Ferro (Fe(NO₃)₃) e prata metálica!";
+    } else if ((r1 === "AgNO3" && r2 === "Na") || (r1 === "Na" && r2 === "AgNO3")) {
+        resultado = "O sódio desloca a prata formando Nitrato de Sódio (NaNO₃) e prata metálica!";
+    } else if ((r1 === "AgNO3" && r2 === "HCl") || (r1 === "HCl" && r2 === "AgNO3")) {
+        resultado = "A reação forma Cloreto de Prata (AgCl), um precipitado branco insolúvel, e ácido nítrico (HNO₃)!";
+    } else if ((r1 === "FeS" && r2 === "HCl") || (r1 === "HCl" && r2 === "FeS")) {
+        resultado = "A reação forma Cloreto de Ferro (FeCl₂) e libera gás sulfídrico (H₂S)!";
+    } else {
+        resultado = "Nenhuma reação ocorre com esses reagentes.";
+    }
+    
+    document.getElementById('resultadoReacao').innerText = resultado;
+}
+    </script>
 </body>
 </html>
